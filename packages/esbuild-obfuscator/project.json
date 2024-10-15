@@ -1,0 +1,32 @@
+{
+  "name": "esbuild-obfuscator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/esbuild-obfuscator/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/esbuild-obfuscator",
+        "main": "packages/esbuild-obfuscator/src/index.ts",
+        "tsConfig": "packages/esbuild-obfuscator/tsconfig.lib.json",
+        "assets": ["packages/esbuild-obfuscator/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "esbuild-obfuscator",
+  "version": "0.0.7",
+  "license": "MIT",
+  "description": "javascript-obfuscator plugin for esbuild",
+  "author": {
+    "name": "@bstrobach",
+    "url": "https://strobach.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bstrobach/esbuild-obfuscator.git"
+  },
+  "keywords": [
+    "esbuild",
+    "obfuscator",
+    "esbuild obfuscator",
+    "javascript obfuscator",
+    "obfuscation"
+  ],
+  "dependencies": {
+    "javascript-obfuscator": "^4.1.1",
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "files": [
+    "src",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {}
+}
